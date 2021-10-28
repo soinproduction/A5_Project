@@ -1,0 +1,11 @@
+.first-index {
+  padding-top: 20px;
+  padding-bottom: 50px;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 30px;
+    align-items: stretch;
+  }
+}

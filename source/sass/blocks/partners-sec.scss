@@ -1,0 +1,13 @@
+.index-partners {
+  padding-bottom: 70px;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__top {
+    margin-bottom: 44px;
+  }
+}

@@ -1,0 +1,54 @@
+.delivery-index {
+  max-width: 370px;
+  width: 100%;
+  display: grid;
+  justify-content: space-between;
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+.delivery-calc {
+  width: 100%;
+  background: linear-gradient(219.16deg, #7BC244 0%, #3A8600 100%);
+  border-radius: 10px;
+  padding: 20px 23px 30px;
+  height: fit-content;
+
+  &__form {
+    display: flex;
+    // flex-direction: column;
+    grid-gap: 24px 15px;
+    flex-wrap: wrap;
+  }
+
+  &__label {
+    display: block;
+    width: 100%;
+
+    &--mini {
+      width: calc(100% / 2 - 7.5px);
+    }
+  }
+
+  &__title {
+    font-family: $font-family--d;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: $text--h;
+    margin: 0 auto 30px;
+    text-align: center;
+    display: block;
+  }
+
+  &__legend {
+    margin-bottom: 10px;
+  }
+}
+

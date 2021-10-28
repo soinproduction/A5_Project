@@ -1,0 +1,13 @@
+.main-top {
+  display: grid;
+  justify-content: center;
+
+  &__title {
+    font-family: $font-family--d;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 130%;
+    color: $text--b;
+  }
+}

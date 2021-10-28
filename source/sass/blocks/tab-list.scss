@@ -1,0 +1,56 @@
+.tabs-list {
+  display: flex;
+  justify-content: center;
+  grid-gap: 46px;
+
+  &__item {
+    width: 23%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-gap: 10px;
+  }
+
+  &__title {
+    font-family: $font-family--a;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: $text--b;
+    margin-bottom: 3px;
+  }
+
+  &__text {
+    font-family: $font-family--a;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    color: $text--c;
+    min-height: 73px;
+    margin-bottom: 10px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    grid-gap: 4px;
+    font-family: $font-family--a;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 150%;
+    color: $text--b;
+  }
+}
+

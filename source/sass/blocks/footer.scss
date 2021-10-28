@@ -1,0 +1,132 @@
+footer {
+  background: $background--b;
+}
+
+.footer {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__second {
+    max-width: 47%;
+    width: 100%;
+    display: grid;
+    grid-gap: 24px;
+  }
+
+  &__first {
+    width: fit-content;
+  }
+
+  &__third {
+    grid-gap: 42px;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+.footer-logo {
+  margin-bottom: 40px;
+
+  svg {
+    fill: $text--h;
+  }
+}
+
+.footer-contact {
+  display: grid;
+  grid-gap: 11px;
+
+  &__item a {
+    font-family: $font-family--a;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: $text--h;
+    grid-gap: 8px;
+  }
+
+  &__icon {
+    width: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+.footer-coll {
+
+
+
+  &__partners {
+    font-family: $font-family--a;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    color: $text--h;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-family: $font-family--a;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    color: $text--h;
+    opacity: .6;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-gap: 5px;
+  }
+
+  &__link {
+    font-family: $font-family--a;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    color: $text--h;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 40% 45%;
+  }
+
+  &__rec li {
+    font-family: $font-family--a;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 150%;
+    color: $text--h;
+    opacity: .6;
+  }
+}
+
+
+.footer-social {
+  display: flex;
+  grid-gap: 8px;
+
+  &__link {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+  }
+}

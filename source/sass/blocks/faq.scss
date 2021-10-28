@@ -1,0 +1,60 @@
+.fag-sec {
+  padding-bottom: 60px;
+  &__top {
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    border: 1px solid #C6C6C6;
+    border-radius: 12px;
+  }
+
+  &__box {
+    display: grid;
+    grid-gap: 30px;
+  }
+
+  &__title {
+    font-family: $font-family--a;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $text--b;
+    padding: 20px 20px 10px 100px;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    user-select: none;
+
+    svg {
+      transition: all .4s;
+    }
+
+    &.active {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+
+    span {
+      max-width: 870px;
+    }
+  }
+
+  &__article {
+    padding: 0 100px 24px;
+    display: grid;
+    grid-gap: 25px;
+    font-family: $font-family--a;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: #666276;
+  }
+}

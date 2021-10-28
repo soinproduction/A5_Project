@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="Ru">
+  @@include('_head.html',{})
+<body>
+  @@include('_header.html',{})
+
+  <main>
+
+    <section class="calc-sec single-sec">
+      <div class="container">
+        <div class="main-top calc-sec__top">
+          <h2 class="main-top__title">
+            Калькулятор
+          </h2>
+        </div>
+
+        <div class="calc-sec__box">
+          <div class="calc-sec__item calc-box">
+            <nav class="calc-box__nav">
+              <ul class="calc-box__list">
+                <li class="calc-box__item">
+                  <button class="calc-box__btn tablinks active" onclick="itemTabs(event, 'calc1')">
+                    Одно место
+                  </button>
+                </li>
+
+                <li class="calc-box__item">
+                  <button class="calc-box__btn tablinks" onclick="itemTabs(event, 'calc2')">
+                    Несколько мест
+                  </button>
+                </li>
+
+                <li class="calc-box__item">
+                  <button class="calc-box__btn tablinks" onclick="itemTabs(event, 'calc3')">
+                    Выделенный транспорт
+                  </button>
+                </li>
+              </ul>
+            </nav>
+
+            <ul class="calc-box__tabs">
+              <li id="calc1" class="calc-box__tab tabcontent active">
+                <form action="#" class="calc-tab">
+                  <div class="calc-tab__item">
+                    wew
+                  </div>
+                  <div class="calc-tab__item">
+                    wew
+                  </div>
+                  <div class="calc-tab__item">
+                    wew
+                  </div>
+                </form>
+              </li>
+              <li id="calc2" class="calc-box__tab tabcontent">2</li>
+              <li id="calc3" class="calc-box__tab tabcontent">3</li>
+            </ul>
+
+          </div>
+
+          <aside class="calc-sec__aside aside-box">
+            <div class="aside-box__top price-box">
+              <h3 class="price-box__title">
+                Стоимость заказа*
+              </h3>
+
+              <ul class="price-box__list">
+                <li class="price-box__item">
+                  <h5 class="price-box__name">
+                    Забор груза:
+                    <span>
+                      От адреса
+                    </span>
+                  </h5>
+                  <span class="price-box__value">
+                    330 ₽
+                  </span>
+                </li>
+
+                <li class="price-box__item">
+                  <h5 class="price-box__name">
+                    Услуги на терминале отправителе:
+                    <span>
+                      Страхование груза и срока
+                    </span>
+                  </h5>
+                  <span class="price-box__value">
+                    76 ₽
+                  </span>
+                </li>
+
+                <li class="price-box__item">
+                  <h5 class="price-box__name">
+                    Межтерминальная перевозка: 
+                    <span>
+                      Москва – Санкт-Петербург
+                    </span>
+                  </h5>
+                  <span class="price-box__value">
+                    370 ₽
+                  </span>
+                </li>
+
+                <li class="price-box__item">
+                  <h5 class="price-box__name">
+                    Доп.услуги:
+                    <span>
+                      Информирование о статусе груза
+                    </span>
+                  </h5>
+                  <span class="price-box__value">
+                    15 ₽
+                  </span>
+                </li>
+
+                <li class="price-box__item">
+                  <h5 class="price-box__name">
+                    Итого:
+                  </h5>
+                  <span class="price-box__value">
+                    791 ₽
+                  </span>
+                </li>
+              </ul>
+
+              <span class="calc-sec__info">
+                * Указана ориентировочная стоимость
+              </span>
+
+            </div>
+
+            <div class="aside-box__bottom chart-box">
+              <h4 class="chart-box__title">
+                График перевозки груза
+              </h4>
+              <ul class="chart-box__list">
+                <li class="chart-box__item">
+                  <span class="chart-box__date">
+                    30 ceн.
+                  </span>
+                  <span class="chart-box__info">
+                    <svg width='20' height='15'>
+                      <use href='img/sprite/sprite.svg#g1'></use>
+                    </svg>
+                    отправляется с адреса клиента
+                  </span>
+                </li>
+                <li class="chart-box__item">
+                  <span class="chart-box__date">
+                    1 окт.
+                  </span>
+                  <span class="chart-box__info">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#g2'></use>
+                    </svg>
+                    отправляется с терминала
+                    г. Москвы
+                  </span>
+                </li>
+                <li class="chart-box__item">
+                  <span class="chart-box__date">
+                    2 окт.
+                  </span>
+                  <span class="chart-box__info">
+                    <svg width='16' height='20'>
+                      <use href='img/sprite/sprite.svg#g3'></use>
+                    </svg>
+                    прибывает на терминал
+                    г. Санкт-Петербурга
+                  </span>
+                </li>
+                <li class="chart-box__item">
+                  <span class="chart-box__date">
+                    2 окт.
+                  </span>
+                  <span class="chart-box__info">
+                    <svg width='20' height='18'>
+                      <use href='img/sprite/sprite.svg#g4'></use>
+                    </svg>
+                    прибывает на терминал
+                    г. Санкт-Петербурга
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="text-sec single-sec">
+      <div class="container">
+        <div class="main-top text-sec__top">
+          <h2 class="main-top__title">
+            Тарифы
+          </h2>
+        </div>
+
+        <ul class="documents-box">
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Aвтомобильная доставка через одну ночь Москва - Санкт-Петербург (Санкт-Петербург - Москва) с учетом НДС.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Санкт-Петербург - Калининград.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Москва - Калининград.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Перевозка по Москве и Московской области (отдельная машина).pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Услуги склада на хранение и обработку грузов на складе 'Северо-Запад', г. Санкт-Петербург.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Cтрахование перевозки груза.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Aвтомобильная доставка через одну ночь Москва - Санкт-Петербург (Санкт-Петербург - Москва) с учетом НДС.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Санкт-Петербург - Калининград.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Москва - Калининград.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Перевозка по Москве и Московской области (отдельная машина).pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Услуги склада на хранение и обработку грузов на складе 'Северо-Запад', г. Санкт-Петербург.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Cтрахование перевозки груза.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Aвтомобильная доставка через одну ночь Москва - Санкт-Петербург (Санкт-Петербург - Москва) с учетом НДС.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Санкт-Петербург - Калининград.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Москва - Калининград.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Перевозка по Москве и Московской области (отдельная машина).pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Услуги склада на хранение и обработку грузов на складе 'Северо-Запад', г. Санкт-Петербург.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Cтрахование перевозки груза.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Aвтомобильная доставка через одну ночь Москва - Санкт-Петербург (Санкт-Петербург - Москва) с учетом НДС.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Санкт-Петербург - Калининград.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Москва - Калининград.pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Перевозка по Москве и Московской области (отдельная машина).pdf
+              </span>
+            </a>
+          </li>
+          <li class="documents-box__item">
+            <a href="#" class="documents-box__link">
+              <svg width='40' height='50'>
+                <use href='img/sprite/sprite.svg#documents'></use>
+              </svg>
+              <span>
+                Услуги склада на хранение и обработку грузов на складе 'Северо-Запад', г. Санкт-Петербург.pdf
+              </span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="site-map">
+      <div class="container">
+        <ul class="site-map__list">
+          <li class="site-map__item">
+            <h3 class="site-map__title">
+              Услуги
+            </h3>
+
+            <ul class="sub-list">
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Услуга
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Услуга
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Услуга
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Услуга
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Услуга
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Услуга
+                </a>
+              </li>
+            </ul>
+
+          </li>
+          <li class="site-map__item">
+            <h3 class="site-map__title">
+              Тарифы
+            </h3>
+
+            <ul class="sub-list">
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Тариф.pdf
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Тариф.pdf
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Тариф.pdf
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Тариф.pdf
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Тариф.pdf
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Тариф.pdf
+                </a>
+              </li>
+            </ul>
+
+          </li>
+          <li class="site-map__item">
+            <h3 class="site-map__title">
+              Сервисы
+            </h3>
+
+            <ul class="sub-list">
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Рассчет стоимости
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Подать заявку
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Узнать статус груза
+                </a>
+              </li>
+            </ul>
+
+          </li>
+          <li class="site-map__item">
+            <h3 class="site-map__title">
+              О нас
+            </h3>
+
+            <ul class="sub-list">
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Оплата
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Документы
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Договор
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Бухгалтерские документы
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Вакансии
+                </a>
+              </li>
+            </ul>
+
+          </li>
+          <li class="site-map__item">
+            <h3 class="site-map__title">
+              Помощь
+            </h3>
+
+            <ul class="sub-list">
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Помощь1
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Помощь2
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Помощь3
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Помощь4
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Помощь5
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Помощь6
+                </a>
+              </li>
+            </ul>
+
+          </li>
+          <li class="site-map__item">
+            <h3 class="site-map__title">
+              Контакты
+            </h3>
+
+            <ul class="sub-list">
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Контакты1
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Контакты2
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Контакты3
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Контакты4
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Контакты5
+                </a>
+              </li>
+              <li class="sub-list__item">
+                <a href="#" class="sub-list__link">
+                  Контакты6
+                </a>
+              </li>
+            </ul>
+
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+  </main>
+  @@include('_footer.html',{})
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/select.min.js"></script>
+  <script src="js/common.min.js"></script>
+</body>
+
+</html>

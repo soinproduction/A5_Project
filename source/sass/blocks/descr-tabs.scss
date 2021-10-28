@@ -1,0 +1,38 @@
+.tab-nav__button {
+  margin: 0 auto;
+  height: 50px;
+  font-family: $font-family--b;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: rgba(123, 194, 68, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.active {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    color: $text--b;
+    background: #BDE1A2;
+    border-radius: 10px 10px 0 0;
+    padding: 0 18px;
+  }
+}
+
+.tab-box {
+  background: $background--c;
+  padding: 40px 0;
+}
+
+.tab-nav__next,
+.tab-nav__prev {
+  display: none;
+}
+
+.tab-nav__list {
+  margin: 0 auto;
+  width: fit-content;
+}
