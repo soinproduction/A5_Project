@@ -20,19 +20,19 @@
               <ul class="calc-box__list">
                 <li class="calc-box__item">
                   <button class="calc-box__btn tablinks active" onclick="itemTabs(event, 'calc11')">
-                    Одно место
+                    Сборный груз
                   </button>
                 </li>
 
                 <li class="calc-box__item">
                   <button class="calc-box__btn tablinks" onclick="itemTabs(event, 'calc22')">
-                    Несколько мест
+                    Выделенный транспорт
                   </button>
                 </li>
 
                 <li class="calc-box__item">
                   <button class="calc-box__btn tablinks" onclick="itemTabs(event, 'calc33')">
-                    Выделенный транспорт
+                    Контейнер
                   </button>
                 </li>
               </ul>
@@ -43,18 +43,37 @@
                 <div class="calc-tab">
                     <form action="#" class="calc-tab__item form-list">
                       <div class="form-list__inner">
-                        <h3 class="form-list__title">
-                          Параметры груза
-                        </h3>
                         <ul class="form-list__body">
                           <li class="form-list__item">
+                            <ul class="radio-list">
+                              <li class="radio-list__item">
+                                <div class="radio">
+                                  <input class="custom-radio" type="radio" id="calc78" name="sender" value="#">
+                                  <label for="calc78">1 место (коробка, ящик, сверток и т.п.)</label>
+                                </div>
+                              </li>
+                              <li class="radio-list__item">
+                                <div class="radio">
+                                  <input class="custom-radio" type="radio" id="calc279" name="sender" value="#">
+                                  <label for="calc279">Несколько мест (не скрепленные вместе)</label>
+                                </div>
+                              </li>
+                              <li class="radio-list__item">
+                                <div class="radio">
+                                  <input class="custom-radio" type="radio" id="calc280" name="sender" value="#">
+                                  <label for="calc280">Письмо (до 0,3х0,2 м, до 0,5 кг.)</label>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="form-list__item">
                             <fieldset class="form-list__wrapper big-form__group">
                               <span class="big-form__icon">
                                 <svg width="24" height="24">
                                   <use href='img/sprite/sprite.svg#f1'></use>
                                 </svg>
                               </span>
-                              <input class="big-form__input" type="number" placeholder="Длина груза">
+                              <input class="big-form__input" type="number" placeholder="Габариты груза 0,1 х 0,1 х 0,1">
                             </fieldset>
 
                             <svg width='33' height='19'>
@@ -65,49 +84,32 @@
                             <fieldset class="form-list__wrapper big-form__group">
                               <span class="big-form__icon">
                                 <svg width="24" height="24">
-                                  <use href='img/sprite/sprite.svg#f1'></use>
-                                </svg>
-                              </span>
-                              <input class="big-form__input" type="number" placeholder="Ширина груза">
-                            </fieldset>
-
-                            <svg width='33' height='19'>
-                              <use href='img/sprite/sprite.svg#m2'></use>
-                            </svg>
-                          </li>
-                          <li class="form-list__item">
-                            <fieldset class="form-list__wrapper big-form__group">
-                              <span class="big-form__icon">
-                                <svg width="24" height="24">
-                                  <use href='img/sprite/sprite.svg#f1'></use>
+                                  <use href='img/sprite/sprite.svg#weight'></use>
                                 </svg>
                               </span>
                               <input class="big-form__input" type="number" placeholder="Вес">
                             </fieldset>
 
-                            <svg width='37' height='21'>
+                            <svg width='33' height='19'>
                               <use href='img/sprite/sprite.svg#kg'></use>
                             </svg>
                           </li>
-
                           <li class="form-list__item">
                             <fieldset class="form-list__wrapper big-form__group">
                               <span class="big-form__icon">
-                                <svg width="20" height="18">
-                                  <use href='img/sprite/sprite.svg#f1'></use>
+                                <svg width="24" height="24">
+                                  <use href='img/sprite/sprite.svg#cub'></use>
                                 </svg>
                               </span>
                               <input class="big-form__input" type="number" placeholder="Объем">
                             </fieldset>
 
-                            <svg width='19' height='17'>
+                            <svg width="19" height="12">
                               <use href='img/sprite/sprite.svg#м3'></use>
                             </svg>
                           </li>
-
-
                           <li class="form-list__item">
-                            <select class="big-form__select js-selectize" name="city" placeholder="Город оплаты">
+                            <select class="big-form__select js-selectize" name="city" placeholder="Характер груза*">
                               <option value=""><!-- всегда пустой --></option>
                               <option value="1">Абаза</option>
                               <option value="2">Абакан</option>
@@ -116,14 +118,47 @@
                               <option value="5">Агидель</option>
                             </select>
                           </li>
+                          <li class="form-list__item form-list__item--class">
+                            <select class="big-form__select js-selectize" name="city" placeholder="Класс опасности">
+                              <option value=""><!-- всегда пустой --></option>
+                              <option value="1">Абаза</option>
+                              <option value="2">Абакан</option>
+                              <option value="3">Абдулино</option>
+                              <option value="4">Абинск</option>
+                              <option value="5">Агидель</option>
+                            </select>
+                          </li>
+                          <li class="form-list__item">
+                            <fieldset class="form-list__wrapper big-form__group">
+                              <span class="big-form__icon">
+                                <svg width="22" height="24">
+                                  <use href='img/sprite/sprite.svg#form-stone'></use>
+                                </svg>
+                              </span>
+                              <input class="big-form__input" type="text" placeholder="Объявленная стоимость">
+                            </fieldset>
 
+                          </li>
+                          <li class="form-list__item">
+                            <ul class="radio-list">
+                              <li class="radio-list__item">
+                                <div class="radio">
+                                  <input class="custom-radio" type="radio" id="calc781" name="sender32" value="#">
+                                  <label for="calc781">Отправка сопроводительных документов</label>
+                                </div>
+                              </li>
+                              <li class="radio-list__item">
+                                <div class="radio">
+                                  <input class="custom-radio" type="radio" id="calc2792" name="sender32" value="#">
+                                  <label for="calc2792">Возврат сопроводительных документов</label>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
                         </ul>
                       </div>
 
                       <div class="form-list__inner">
-                        <h3 class="form-list__title">
-                          Маршрут
-                        </h3>
                         <ul class="form-list__body">
                           <li class="form-list__item form-list__item--radio">
                             <fieldset class="form-list__wrapper big-form__group">
@@ -189,41 +224,54 @@
                             </fieldset>
 
                           </li>
-
-
-                        </ul>
-                      </div>
-
-                      <div class="form-list__inner">
-                        <h3 class="form-list__title">
-                          Дополнительные услуги
-                        </h3>
-                        <ul class="form-list__body">
-                          <li class="form-list__item form-list__item--radio">
+                          <li class="form-list__item">
                             <ul class="radio-list">
                               <li class="radio-list__item">
                                 <div class="radio">
-                                  <input class="custom-radio" type="radio" id="calc5" name="sender3" value="#">
-                                  <label for="calc5">Отправка сопроводительных док-в.</label>
+                                  <input class="custom-radio" type="radio" id="calc78a" name="sender45" value="#">
+                                  <label for="calc78a">Палетная</label>
                                 </div>
                               </li>
                               <li class="radio-list__item">
                                 <div class="radio">
-                                  <input class="custom-radio" type="radio" id="calc21" name="sender3" value="#">
-                                  <label for="calc21">Возврат сопроводительных док-в.</label>
+                                  <input class="custom-radio" type="radio" id="calc279b" name="sender45" value="#">
+                                  <label for="calc279b">Жестяная упаковка - обрешетка</label>
                                 </div>
                               </li>
                               <li class="radio-list__item">
                                 <div class="radio">
-                                  <input class="custom-radio" type="radio" id="calc32" name="sender3" value="#">
-                                  <label for="calc32">Страхование</label>
+                                  <input class="custom-radio" type="radio" id="calc280c" name="sender45" value="#">
+                                  <label for="calc280c">Картонная упаковка</label>
                                 </div>
                               </li>
                               <li class="radio-list__item">
                                 <div class="radio">
-                                  <input class="custom-radio" type="radio" id="calc42" name="sender3" value="#">
-                                  <label for="calc42">Обрешётка (дополнительная
-                                    жесткая упаковка груза)</label>
+                                  <input class="custom-radio" type="radio" id="calc78d" name="sender45" value="#">
+                                  <label for="calc78d">Воздушно-пузырчатая пленка</label>
+                                </div>
+                              </li>
+                              <li class="radio-list__item">
+                                <div class="radio">
+                                  <input class="custom-radio" type="radio" id="calc279e" name="sender45" value="#">
+                                  <label for="calc279e">Сейф-мешок с пломбой</label>
+                                </div>
+                              </li>
+                              <li class="radio-list__item">
+                                <div class="radio">
+                                  <input class="custom-radio" type="radio" id="calc280g" name="sender45" value="#">
+                                  <label for="calc280g">Стрэппинг-лента</label>
+                                </div>
+                              </li>
+                              <li class="radio-list__item">
+                                <div class="radio">
+                                  <input class="custom-radio" type="radio" id="calc78h" name="sender45" value="#">
+                                  <label for="calc78h">Стрейчевание</label>
+                                </div>
+                              </li>
+                              <li class="radio-list__item">
+                                <div class="radio">
+                                  <input class="custom-radio" type="radio" id="calc279i" name="sender45" value="#">
+                                  <label for="calc279i">Скотчевание</label>
                                 </div>
                               </li>
                             </ul>
@@ -231,8 +279,6 @@
 
                         </ul>
                       </div>
-
-
                     </form>
                  </div>
 

@@ -9,6 +9,11 @@ body {
   color: #5f5f5f;
 
   background-color: #ffffff;
+
+  &.active {
+    overflow: hidden;
+    position: fixed;
+  }
 }
 
 html {
@@ -156,3 +161,4 @@ input[type="number"] {
 .single-sec {
   margin-top: 50px;
 }
+

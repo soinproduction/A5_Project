@@ -133,16 +133,16 @@
 
                 <div  class="delivery-calc__label delivery-calc__label--mini calc-input">
                   <span class="delivery-calc__legend calc-legend">
-                    Вес
+                    Срок доставки
                   </span>
-                  <input type="text" value="100 кг" placeholder="Вес">
+                  <input type="text" value="3 дня" placeholder="Срок доставки">
                 </div>
 
                 <div  class="delivery-calc__label delivery-calc__label--mini calc-input">
                   <span class="delivery-calc__legend calc-legend">
-                    Срок доставки
+                    Стоимость
                   </span>
-                  <input type="text" value="3 дня" placeholder="Срок доставки">
+                  <input type="text" value="150 000 ₽" placeholder="Стоимость">
 
                 </div>
 
@@ -845,7 +845,9 @@
                   <input class="big-form__input" type="text" placeholder="Наименование груза">
                 </fieldset>
 
-                <ul class="radio-list">
+                <ul class="radio-list
+
+                ">
                   <li class="radio-list__item">
                     <div class="radio">
                       <input class="custom-radio" type="radio" id="cargo-id1" name="cargo-id" value="#">
@@ -1413,6 +1415,7 @@
 
   </main>
   @@include('_footer.html',{})
+  @@include('_modal.html',{})
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <!-- <script src="js/microPlugin.min.js"></script>

@@ -58,3 +58,24 @@
   color: $text--h;
   margin: 0 auto;
 }
+
+.add-point {
+  display: flex;
+  align-items: center;
+  grid-gap: 18px;
+
+  span {
+    font-family: $font-family--c;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: $text--a;
+  }
+}
+
+.non-title {
+  min-height: 32px;
+}
+
+

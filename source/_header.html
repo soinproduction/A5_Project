@@ -1,6 +1,13 @@
 <header>
   <div class="container">
     <div class="header">
+
+      <button class="burger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <div class="header-logo">
         <a href="index.html">
           <svg width='70' height='70'>
@@ -48,8 +55,32 @@
             <ul class="header-nav__list">
               <li><a  class="header-nav__link active" href="services.html">Услуги</a></li>
               <li><a  class="header-nav__link" href="tarif.html">Тарифы</a></li>
-              <li><a  class="header-nav__link" href="status.html">Статус груза</a></li>
-              <li><a  class="header-nav__link" href="about-us.html">О нас</a></li>
+              <li><button data-modal="status" class="header-nav__link">Статус груза</button></li>
+              <li class="dropdown">
+                <a  class="header-nav__link" href="about-us.html">О нас</a>
+
+                <ul class="dropdown__list">
+                  <li class="dropdown__item">
+                    <a href="#">Реквизиты</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#">Оплата</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#">Документы</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#">Договор</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#">Бухгалтерия</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#">Вакансии</a>
+                  </li>
+                </ul>
+
+              </li>
               <li><a  class="header-nav__link" href="help.html">Помощь</a></li>
               <li><a  class="header-nav__link" href="contacts.html">Контакты</a></li>
             </ul>
@@ -59,4 +90,73 @@
 
     </div>
   </div>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__box">
+      <a href="#" class="mobile-logo">
+        <svg width='50' height='50'>
+          <use href='img/sprite/sprite.svg#logo'></use>
+        </svg>
+      </a>
+
+      <ul class="mobile-nav">
+        <li>
+          <a href="#">
+            Услуги
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Тарифы
+          </a>
+        </li>
+        <li>
+          <button data-modal="status">
+            Статус груза
+          </button>
+        </li>
+        <li>
+          <a href="#">
+            О нас
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Помощь
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Контакты
+          </a>
+        </li>
+      </ul>
+
+      <ul class="mobile-social">
+        <li>
+          <a href="#">
+            <svg width='16' height='16'>
+              <use href='img/sprite/sprite.svg#insta'></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg width='16' height='9'>
+              <use href='img/sprite/sprite.svg#vk'></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg width='14' height='14'>
+              <use href='img/sprite/sprite.svg#telegram'></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
 </header>
