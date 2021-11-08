@@ -54,3 +54,33 @@
   }
 }
 
+.more-slider {
+  width: 90%;
+  height: 40px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: Min(5vw, 18px);
+  margin-top: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s;
+}
+
+.tabs-list__item {
+  cursor: pointer;
+}
+
+.tabs-list__item:hover {
+  .more-slider {
+    opacity: 1;
+    pointer-events: initial;
+  }
+}
+
+

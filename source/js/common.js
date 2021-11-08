@@ -18,6 +18,12 @@ $(document).mouseup(function (e) {
   }
 });
 
+$('.variant-item').on('click', function() {
+  $('html,body').animate({scrollTop:$('.input-sec').offset().top+"px"},{duration:1E3});
+});
+
+
+
 
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -223,8 +229,6 @@ if ($(".form-list__item")) {
 
 
 partnersSlider && partnersSlider.autoplay.start();
-
-
 
 
 
