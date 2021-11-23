@@ -25,6 +25,11 @@ $('.variant-item').on('click', function() {
 
 
 
+
+
+
+
+
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -223,13 +228,43 @@ if ($(".form-list__item")) {
       $.datepicker.setDefaults($.datepicker.regional['ru']);
   });
 
-
-
 }
 
+// if (partnersSlider) {
+//   partnersSlider.autoplay.start();
+// }
 
-partnersSlider && partnersSlider.autoplay.start();
 
 
 
+
+// const tabsParr = document.querySelector('.lk-main');
+// if (tabsParr) {
+//   document.addEventListener('DOMContentLoaded', () => {
+//     const tabs = tabsParr.querySelector('.tabs');
+//     const tabsBtn = tabsParr.querySelectorAll('.tablinks');
+//     const tabsContent = tabsParr.querySelectorAll('.tabcontent');
+//     if (tabs) {
+//       tabs.addEventListener('click', (e) => {
+//         if (e.target.classList.contains('tablinks')) {
+//           const tabsPath = e.target.dataset.tabsPath;
+//           tabsBtn.forEach(el => {el.classList.remove('active')});
+//           tabsParr.querySelector(`[data-tabs-path="${tabsPath}"]`).classList.add('active');
+//           tabsHandler(tabsPath);
+//         }
+//       });
+//     }
+//     const tabsHandler = (path) => {
+//       tabsContent.forEach(el => {el.classList.remove('active')});
+//       tabsParr.querySelector(`[data-tabs-target="${path}"]`).classList.add('active');
+//     };
+//   });
+// }
+
+
+$('.lk-nav__menu').on('click', function (e) {
+  e.preventDefault();
+  $(this).toggleClass('active');
+  $('.main-box').toggleClass('active')
+});
 

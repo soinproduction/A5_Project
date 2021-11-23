@@ -1,0 +1,98 @@
+.lk-main {
+  padding-bottom: 65px;
+
+  &__top {
+    margin-bottom: 24px;
+  }
+
+  &__box {
+    display: grid;
+    grid-gap: 40px;
+  }
+}
+
+
+.lk-nav {
+  display: flex;
+  padding: 0 80px;
+  height: 60px;
+  align-items: center;
+  background: linear-gradient(219.16deg, #7BC244 0%, #3A8600 100%);
+  border-radius: 10px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__item a {
+    font-family: $font-family--a;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+
+    svg {
+      stroke: currentColor;
+    }
+  }
+
+  &__menu.active {
+    color: #5F5F5F;
+  }
+}
+
+
+.main-box {
+  max-width: 830px;
+  width: 100%;
+  margin: 0 auto;
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-template-areas:
+   "profile add calc"
+   "profile list geo";
+
+  &__profile {
+    grid-area: profile;
+  }
+
+  &__add {
+    grid-area: add;
+  }
+
+  &__calc {
+    grid-area: calc;
+  }
+
+  &__list {
+    grid-area: list;
+  }
+
+  &__geo {
+    grid-area: geo;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    grid-gap: 30px;
+    min-height: 166px;
+    border: 1px solid #C6C6C6;
+  }
+
+  &.active {
+    display: grid;
+  }
+
+}
+
