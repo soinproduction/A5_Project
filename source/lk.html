@@ -26,7 +26,7 @@
                 </a>
               </li>
               <li class="lk-nav__item">
-                <a href="#">
+                <a href="#" data-modal="status">
                   Форма отслеживания
                 </a>
               </li>
@@ -52,52 +52,755 @@
           </nav>
 
           <div class="main-box active">
-            <a href="#" class="main-box__link main-box__profile" >
+            <button class="main-box__link main-box__profile tab-btn" data-tabs-path="1">
               <svg width="45" height="43">
                 <use href='img/sprite/sprite.svg#menu1'></use>
               </svg>
 
               <span>Профиль</span>
 
-            </a>
+            </button>
 
-            <a href="#" class="main-box__link main-box__add" >
+            <button class="main-box__link main-box__add" >
               <svg width="40" height="51">
                 <use href='img/sprite/sprite.svg#menu2'></use>
               </svg>
 
               <span>Добавить  заказ</span>
 
-            </a>
+            </button>
 
-            <a href="#" class="main-box__link main-box__calc" >
+            <button class="main-box__link main-box__calc" >
               <svg width="40" height="50">
                 <use href='img/sprite/sprite.svg#menu3'></use>
               </svg>
 
               <span>Калькулятор</span>
 
-            </a>
+            </button>
 
-            <a href="#" class="main-box__link main-box__list" >
+            <button class="main-box__link main-box__list tab-btn" data-tabs-path="3">
               <svg width="40" height="54">
                 <use href='img/sprite/sprite.svg#menu4'></use>
               </svg>
 
               <span>Список заказов</span>
 
-            </a>
+            </button>
 
-            <a href="#" class="main-box__link main-box__geo" >
+            <button class="main-box__link main-box__geo tab-btn" data-tabs-path="2">
               <svg width="40" height="50">
                 <use href='img/sprite/sprite.svg#menu5'></use>
               </svg>
 
               <span>Адресная книга</span>
 
-            </a>
+            </button>
 
           </div>
+
+          <ul class="mains-tabs">
+            <li class="main-tab tab-block" data-tabs-target="1">
+              <h3 class="main-tab__title">
+                Профиль
+              </h3>
+
+              <form action="#" class="big-form tabs-form">
+
+                <div class="tabs-form__item">
+                  <fieldset class="big-form__group">
+                    <span class="big-form__icon">
+                      <svg width="24" height="25">
+                        <use href='img/sprite/sprite.svg#city'></use>
+                      </svg>
+                    </span>
+                    <input class="big-form__input" type="text" placeholder="Организация">
+                  </fieldset>
+                  <fieldset class="big-form__group">
+                    <span class="big-form__icon">
+                      <svg width="24" height="19">
+                        <use href='img/sprite/sprite.svg#form-mail'></use>
+                      </svg>
+                    </span>
+                    <input class="big-form__input" type="email" placeholder="E-mail">
+                  </fieldset>
+                  <fieldset class="big-form__group">
+                    <span class="big-form__icon">
+                      <svg width="24" height="24">
+                        <use href='img/sprite/sprite.svg#form-phone'></use>
+                      </svg>
+                    </span>
+                    <input class="big-form__input" type="tel" placeholder="Телефон">
+                  </fieldset>
+                  <fieldset class="big-form__group">
+                    <span class="big-form__icon">
+                      <svg width="24" height="24">
+                        <use href='img/sprite/sprite.svg#form-pasport'></use>
+                      </svg>
+                    </span>
+                    <input class="big-form__input" type="number" placeholder="ИНН">
+                  </fieldset>
+                </div>
+
+                <div class="tabs-form__item">
+                  <fieldset class="big-form__group">
+                    <span class="big-form__icon">
+                      <svg width="24" height="17">
+                        <use href='img/sprite/sprite.svg#form-mail'></use>
+                      </svg>
+                    </span>
+                    <input class="big-form__input" type="email" placeholder="Дополнительный Email">
+                  </fieldset>
+                  <fieldset class="big-form__group">
+                    <span class="big-form__icon">
+                      <svg width="24" height="22">
+                        <use href='img/sprite/sprite.svg#form-money'></use>
+                      </svg>
+                    </span>
+                    <input class="big-form__input" type="number" placeholder="Баланс экспресс">
+                  </fieldset>
+                  <fieldset class="big-form__group">
+                    <span class="big-form__icon">
+                      <svg width="24" height="24">
+                        <use href='img/sprite/sprite.svg#form-profile'></use>
+                      </svg>
+                    </span>
+                    <input class="big-form__input" type="text" placeholder="Ваш аккаунт менеджер">
+                  </fieldset>
+                  <fieldset class="big-form__group">
+                    <span class="big-form__icon">
+                      <svg width="24" height="24">
+                        <use href='img/sprite/sprite.svg#form-phone'></use>
+                      </svg>
+                    </span>
+                    <input class="big-form__input" type="tel" placeholder="Добавочный номер мнеджера">
+                  </fieldset>
+                </div>
+
+
+
+                <div class="tabs-form__item">
+                  <div class="big-form__inner">
+                    <select class="big-form__select js-selectize clock-select" name="city" placeholder="Время забора от: По умолчанию">
+                      <option value=""><!-- всегда пустой --></option>
+                      <option value="1">Абаза</option>
+                      <option value="2">Абакан</option>
+                      <option value="3">Абдулино</option>
+                      <option value="4">Абинск</option>
+                      <option value="5">Агидель</option>
+                    </select>
+                  </div>
+                  <div class="big-form__inner">
+                    <select class="big-form__select js-selectize clock-select" name="city" placeholder="Время забора до: По умолчанию">
+                      <option value=""><!-- всегда пустой --></option>
+                      <option value="1">Абаза</option>
+                      <option value="2">Абакан</option>
+                      <option value="3">Абдулино</option>
+                      <option value="4">Абинск</option>
+                      <option value="5">Агидель</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+
+            </li>
+            <li class="main-tab tab-block" data-tabs-target="2">
+              <h3 class="main-tab__title">
+                Адресная книга
+              </h3>
+
+              <form action="#" class="big-form tabs-form">
+                <div class="tabs-form__item">
+                  <div class="big-form__inner">
+                    <select class="big-form__select js-selectize type-select" name="city" placeholder="Тип">
+                      <option value=""><!-- всегда пустой --></option>
+                      <option value="1">Абаза</option>
+                      <option value="2">Абакан</option>
+                      <option value="3">Абдулино</option>
+                      <option value="4">Абинск</option>
+                      <option value="5">Агидель</option>
+                    </select>
+                  </div>
+                  <fieldset class="big-form__group">
+                    <span class="big-form__icon">
+                      <svg width="24" height="25">
+                        <use href='img/sprite/sprite.svg#city'></use>
+                      </svg>
+                    </span>
+                    <input class="big-form__input" type="text" placeholder="Организация">
+                  </fieldset>
+                  <fieldset class="big-form__group">
+                    <span class="big-form__icon">
+                      <svg width="16" height="24">
+                        <use href='img/sprite/sprite.svg#form-geo'></use>
+                      </svg>
+                    </span>
+                    <input class="big-form__input" type="text" placeholder="Город">
+                  </fieldset>
+                  <fieldset class="big-form__group">
+                    <span class="big-form__icon">
+                      <svg width="24" height="24">
+                        <use href='img/sprite/sprite.svg#form-flag'></use>
+                      </svg>
+                    </span>
+                    <input class="big-form__input" type="text" placeholder="Адрес">
+                  </fieldset>
+                  <fieldset class="big-form__group">
+                    <span class="big-form__icon">
+                      <svg width="24" height="24">
+                        <use href='img/sprite/sprite.svg#form-phone'></use>
+                      </svg>
+                    </span>
+                    <input class="big-form__input" type="tel" placeholder="Телефон">
+                  </fieldset>
+                </div>
+              </form>
+
+            </li>
+
+            <li class="main-tab tab-block" data-tabs-target="3">
+              <h3 class="main-tab__title">
+                Список заказов
+              </h3>
+
+
+
+              <div class="table-box">
+                <ul class="table-box__titles">
+                  <li class="table-box__title">
+                    <span>
+                      Действия
+                    </span>
+                  </li>
+                  <li class="table-box__title">
+                    <span>
+                      ID
+                    </span>
+                  </li>
+                  <li class="table-box__title">
+                    <span>
+                      Тип
+                      отправления
+                    </span>
+                  </li>
+                  <li class="table-box__title">
+                    <span>
+                      Отправитель
+                    </span>
+                  </li>
+                  <li class="table-box__title">
+                    <span>
+                      Город
+                      доставки
+                    </span>
+                  </li>
+                  <li class="table-box__title">
+                    <span>
+                      Получатель
+                    </span>
+                  </li>
+                  <li class="table-box__title">
+                    <span>
+                      Город получателя
+                    </span>
+                  </li>
+                  <li class="table-box__title">
+                    <span>
+                      Вид доставки
+                    </span>
+                  </li>
+                  <li class="table-box__title">
+                    <span>
+                      Дата
+                    </span>
+                  </li>
+                  <li class="table-box__title">
+                    <span>
+                      Статус
+                    </span>
+                  </li>
+                  <li class="table-box__title">
+                    <span>
+                      Цена
+                    </span>
+                  </li>
+                </ul>
+                <ul class="table-box__list">
+                  <li class="table-box__row table-box__row--head">
+                    <div class="table-box__coll">
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#download'></use>
+                        </svg>
+                      </button>
+
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#eye'></use>
+                        </svg>
+                      </button>
+
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#copy'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="table-box__coll">
+
+                    </div>
+                    <div class="table-box__coll">
+                      <div class="table-box__accordion accordion">
+                        <svg width='11' height='8'>
+                          <use href='img/sprite/sprite.svg#table-arrow'></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="table-box__coll">
+
+                    </div>
+                    <div class="table-box__coll">
+
+                    </div>
+                    <div class="table-box__coll">
+
+                    </div>
+                    <div class="table-box__coll">
+
+                    </div>
+                    <div class="table-box__coll">
+
+                    </div>
+                    <div class="table-box__coll">
+
+                    </div>
+                    <div class="table-box__coll">
+
+                    </div>
+                    <div class="table-box__coll">
+
+                    </div>
+                  </li>
+                  <li class="table-box__row">
+                    <div class="table-box__coll">
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#download'></use>
+                        </svg>
+                      </button>
+
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#eye'></use>
+                        </svg>
+                      </button>
+
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#copy'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        1234567
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        Внутренний
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        ООО ИП
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        Москва
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        ИП ООО
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>Санкт-Петербург</span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        До дверей
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        12.11.21
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        В доставке
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        1 р.
+                      </span>
+                    </div>
+                  </li>
+                  <li class="table-box__row">
+                    <div class="table-box__coll">
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#download'></use>
+                        </svg>
+                      </button>
+
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#eye'></use>
+                        </svg>
+                      </button>
+
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#copy'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        1234567
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        Внутренний
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        ООО ИП
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        Москва
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        ИП ООО
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>Санкт-Петербург</span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        До дверей
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        12.11.21
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        В доставке
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        1 р.
+                      </span>
+                    </div>
+                  </li>
+                  <li class="table-box__row">
+                    <div class="table-box__coll">
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#download'></use>
+                        </svg>
+                      </button>
+
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#eye'></use>
+                        </svg>
+                      </button>
+
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#copy'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        1234567
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        Внутренний
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        ООО ИП
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        Москва
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        ИП ООО
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>Санкт-Петербург</span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        До дверей
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        12.11.21
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        В доставке
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        1 р.
+                      </span>
+                    </div>
+                  </li>
+                  <li class="table-box__row">
+                    <div class="table-box__coll">
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#download'></use>
+                        </svg>
+                      </button>
+
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#eye'></use>
+                        </svg>
+                      </button>
+
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#copy'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        1234567
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        Внутренний
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        ООО ИП
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        Москва
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        ИП ООО
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>Санкт-Петербург</span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        До дверей
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        12.11.21
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        В доставке
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        1 р.
+                      </span>
+                    </div>
+                  </li>
+                  <li class="table-box__row">
+                    <div class="table-box__coll">
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#download'></use>
+                        </svg>
+                      </button>
+
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#eye'></use>
+                        </svg>
+                      </button>
+
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#copy'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        1234567
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        Внутренний
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        ООО ИП
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        Москва
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        ИП ООО
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>Санкт-Петербург</span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        До дверей
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        12.11.21
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        В доставке
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        1 р.
+                      </span>
+                    </div>
+                  </li>
+                  <li class="table-box__row">
+                    <div class="table-box__coll">
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#download'></use>
+                        </svg>
+                      </button>
+
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#eye'></use>
+                        </svg>
+                      </button>
+
+                      <button>
+                        <svg width='11' height='11'>
+                          <use href='img/sprite/sprite.svg#copy'></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        1234567
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        Внутренний
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        ООО ИП
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        Москва
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        ИП ООО
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>Санкт-Петербург</span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        До дверей
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        12.11.21
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        В доставке
+                      </span>
+                    </div>
+                    <div class="table-box__coll">
+                      <span>
+                        1 р.
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+            </li>
+
+          </ul>
 
 
         </div>

@@ -167,7 +167,8 @@ $('.close-window').click(function() {
 
 
 
-$('[data-modal=status]').on('click', function(){
+$('[data-modal=status]').on('click', function(e){
+  e.preventDefault();
   $('.overlay, #statusModal').fadeIn('slow');
 });
 
@@ -186,7 +187,7 @@ $(document).mouseup(function (e) {
 
 $('.js-selectize').selectize();
 
-if ($(".form-list__item")) {
+if ($(".form-list__item--data")) {
 
   $(function() {
     let input = $(".form-list__item--data input");
@@ -206,26 +207,26 @@ if ($(".form-list__item")) {
       }
     });
 
-      /* Локализация datepicker */
-      $.datepicker.regional['ru'] = {
-        closeText: 'Закрыть',
-        prevText: 'Предыдущий',
-        nextText: 'Следующий',
-        currentText: 'Сегодня',
-        monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-        monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
-        dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
-        dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
-        dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-        weekHeader: 'Не',
-        dateFormat: 'dd.mm.yy',
-        firstDay: 1,
-        isRTL: false,
-        showMonthAfterYear: false,
-        yearSuffix: ''
-      };
+    /* Локализация datepicker */
+    $.datepicker.regional['ru'] = {
+      closeText: 'Закрыть',
+      prevText: 'Предыдущий',
+      nextText: 'Следующий',
+      currentText: 'Сегодня',
+      monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+      monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+      dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+      dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+      dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+      weekHeader: 'Не',
+      dateFormat: 'dd.mm.yy',
+      firstDay: 1,
+      isRTL: false,
+      showMonthAfterYear: false,
+      yearSuffix: ''
+    };
 
-      $.datepicker.setDefaults($.datepicker.regional['ru']);
+    $.datepicker.setDefaults($.datepicker.regional['ru']);
   });
 
 }
@@ -234,37 +235,51 @@ if ($(".form-list__item")) {
 //   partnersSlider.autoplay.start();
 // }
 
-
-
-
-
-// const tabsParr = document.querySelector('.lk-main');
-// if (tabsParr) {
-//   document.addEventListener('DOMContentLoaded', () => {
-//     const tabs = tabsParr.querySelector('.tabs');
-//     const tabsBtn = tabsParr.querySelectorAll('.tablinks');
-//     const tabsContent = tabsParr.querySelectorAll('.tabcontent');
-//     if (tabs) {
-//       tabs.addEventListener('click', (e) => {
-//         if (e.target.classList.contains('tablinks')) {
-//           const tabsPath = e.target.dataset.tabsPath;
-//           tabsBtn.forEach(el => {el.classList.remove('active')});
-//           tabsParr.querySelector(`[data-tabs-path="${tabsPath}"]`).classList.add('active');
-//           tabsHandler(tabsPath);
-//         }
-//       });
-//     }
-//     const tabsHandler = (path) => {
-//       tabsContent.forEach(el => {el.classList.remove('active')});
-//       tabsParr.querySelector(`[data-tabs-target="${path}"]`).classList.add('active');
-//     };
-//   });
-// }
+const mainTabs = document.querySelectorAll('.main-tab');
 
 
 $('.lk-nav__menu').on('click', function (e) {
   e.preventDefault();
-  $(this).toggleClass('active');
-  $('.main-box').toggleClass('active')
+  $(this).addClass('active');
+  $('.main-box').addClass('active');
+  $('.tab-btn').remove('active');
+
+  for (const mainTab of mainTabs) {
+    mainTab.classList.remove('active');
+  };
+
 });
+
+const tabMenu = document.querySelector('.lk-nav__menu');
+const tabBox = document.querySelector('.main-box');
+
+
+const tabsParr = document.querySelector('.lk-main');
+if (tabsParr) {
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = tabsParr.querySelector('.lk-main__box');
+    const tabsBtn = tabsParr.querySelectorAll('.tab-btn');
+    const tabsContent = tabsParr.querySelectorAll('.tab-block');
+    if (tabs) {
+      tabs.addEventListener('click', (e) => {
+
+        if (e.target.classList.contains('tab-btn')) {
+          e.stopPropagation();
+          tabMenu.classList.remove('active');
+          tabBox.classList.remove('active');
+          const tabsPath = e.target.dataset.tabsPath;
+          tabsBtn.forEach(el => {el.classList.remove('active')});
+          tabsParr.querySelector(`[data-tabs-path="${tabsPath}"]`).classList.add('active');
+          tabsHandler(tabsPath);
+        }
+
+      });
+    }
+    const tabsHandler = (path) => {
+      tabsContent.forEach(el => {el.classList.remove('active')});
+      tabsParr.querySelector(`[data-tabs-target="${path}"]`).classList.add('active');
+    };
+  });
+}
+
 
