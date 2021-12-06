@@ -124,6 +124,7 @@ let partnersSlider = new Swiper(".index-partners__box", {
 
 
 
+
 let tabSlider = new Swiper(".tab-nav", {
   spaceBetween: 20,
   slidesPerView: 4,
@@ -187,11 +188,9 @@ $(document).mouseup(function (e) {
 
 $('.js-selectize').selectize();
 
-if ($(".form-list__item--data")) {
-
+if ($(".form-list__item--data").length > 0) {
   $(function() {
-    let input = $(".form-list__item--data input");
-    input.datepicker({
+    $('.form-list__item--data input').datepicker({
       showOn: "button",
       buttonImage: "../img/sprite/data.svg",
       buttonImageOnly: true,
@@ -229,11 +228,9 @@ if ($(".form-list__item--data")) {
     $.datepicker.setDefaults($.datepicker.regional['ru']);
   });
 
+
 }
 
-// if (partnersSlider) {
-//   partnersSlider.autoplay.start();
-// }
 
 const mainTabs = document.querySelectorAll('.main-tab');
 

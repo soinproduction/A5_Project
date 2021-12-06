@@ -18,7 +18,7 @@
           <nav class="lk-nav">
             <ul class="lk-nav__list">
               <li class="lk-nav__item">
-                <a href="#" class="lk-nav__menu active">
+                <a href="#" class="lk-nav__menu">
                   <svg width="20" height="15">
                     <use href='img/sprite/sprite.svg#burger'></use>
                   </svg>
@@ -51,7 +51,7 @@
             </ul>
           </nav>
 
-          <div class="main-box active">
+         <!-- <div class="main-box">
             <button class="main-box__link main-box__profile tab-btn" data-tabs-path="1">
               <svg width="45" height="43">
                 <use href='img/sprite/sprite.svg#menu1'></use>
@@ -182,7 +182,7 @@
                 <div class="tabs-form__item">
                   <div class="big-form__inner">
                     <select class="big-form__select js-selectize clock-select" name="city" placeholder="Время забора от: По умолчанию">
-                      <option value=""><!-- всегда пустой --></option>
+                      <option value="">всегда пустой</option>
                       <option value="1">Абаза</option>
                       <option value="2">Абакан</option>
                       <option value="3">Абдулино</option>
@@ -192,7 +192,7 @@
                   </div>
                   <div class="big-form__inner">
                     <select class="big-form__select js-selectize clock-select" name="city" placeholder="Время забора до: По умолчанию">
-                      <option value=""><!-- всегда пустой --></option>
+                      <option value="">всегда пустой</option>
                       <option value="1">Абаза</option>
                       <option value="2">Абакан</option>
                       <option value="3">Абдулино</option>
@@ -213,7 +213,7 @@
                 <div class="tabs-form__item">
                   <div class="big-form__inner">
                     <select class="big-form__select js-selectize type-select" name="city" placeholder="Тип">
-                      <option value=""><!-- всегда пустой --></option>
+                      <option value="">всегда пустой</option>
                       <option value="1">Абаза</option>
                       <option value="2">Абакан</option>
                       <option value="3">Абдулино</option>
@@ -257,7 +257,6 @@
               </form>
 
             </li>
-
             <li class="main-tab tab-block" data-tabs-target="3">
               <h3 class="main-tab__title">
                 Список заказов
@@ -843,8 +842,76 @@
               </div>
 
             </li>
+          </ul> -->
 
-          </ul>
+
+          <div class="single-wrapper">
+            <h3 class="main-tab__title">
+              Список заказов
+            </h3>
+
+            <p class="lists-id">
+              Заказ: &nbsp; <span>ID 1234567</span>
+            </p>
+
+            <form action="#" class="single-form">
+
+              <ul class="single-form__list">
+                <li class="single-form__item">
+                  <h2 class="single-form__title">
+                    <svg width='' height=''>
+                      <use href='img/sprite/sprite.svg#'></use>
+                    </svg>
+                    Выберите путь вашего отправления:
+                  </h2>
+                </li>
+
+                <li class="single-form__item">
+                  <h2 class="single-form__title">
+                    <svg width='' height=''>
+                      <use href='img/sprite/sprite.svg#'></use>
+                    </svg>
+                    Параметры отправления:
+                  </h2>
+                </li>
+
+                <li class="single-form__item">
+                  <h2 class="single-form__title">
+                    <svg width='' height=''>
+                      <use href='img/sprite/sprite.svg#'></use>
+                    </svg>
+                    Как быстро необходимо доставить груз?
+                  </h2>
+                </li>
+
+                <li class="single-form__item">
+                  <h2 class="single-form__title">
+                    <svg width='' height=''>
+                      <use href='img/sprite/sprite.svg#'></use>
+                    </svg>
+                    Информация об отправителе:
+                  </h2>
+                </li>
+
+                <li class="single-form__item">
+                  <h2 class="single-form__title">
+                    <svg width='' height=''>
+                      <use href='img/sprite/sprite.svg#'></use>
+                    </svg>
+                    Информация о получателе
+                  </h2>
+                </li>
+
+                <li class="single-form__item">
+                  <h2 class="single-form__title">
+                    Дополнительные услуги
+                  </h2>
+                </li>
+              </ul>
+
+            </form>
+
+          </div>
 
 
         </div>

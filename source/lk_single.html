@@ -18,7 +18,7 @@
           <nav class="lk-nav">
             <ul class="lk-nav__list">
               <li class="lk-nav__item">
-                <a href="#" class="lk-nav__menu active">
+                <a href="#" class="lk-nav__menu">
                   <svg width="20" height="15">
                     <use href='img/sprite/sprite.svg#burger'></use>
                   </svg>
@@ -51,7 +51,7 @@
             </ul>
           </nav>
 
-          <div class="main-box active">
+         <!-- <div class="main-box">
             <button class="main-box__link main-box__profile tab-btn" data-tabs-path="1">
               <svg width="45" height="43">
                 <use href='img/sprite/sprite.svg#menu1'></use>
@@ -182,7 +182,7 @@
                 <div class="tabs-form__item">
                   <div class="big-form__inner">
                     <select class="big-form__select js-selectize clock-select" name="city" placeholder="Время забора от: По умолчанию">
-                      <option value=""><!-- всегда пустой --></option>
+                      <option value="">всегда пустой</option>
                       <option value="1">Абаза</option>
                       <option value="2">Абакан</option>
                       <option value="3">Абдулино</option>
@@ -192,7 +192,7 @@
                   </div>
                   <div class="big-form__inner">
                     <select class="big-form__select js-selectize clock-select" name="city" placeholder="Время забора до: По умолчанию">
-                      <option value=""><!-- всегда пустой --></option>
+                      <option value="">всегда пустой</option>
                       <option value="1">Абаза</option>
                       <option value="2">Абакан</option>
                       <option value="3">Абдулино</option>
@@ -213,7 +213,7 @@
                 <div class="tabs-form__item">
                   <div class="big-form__inner">
                     <select class="big-form__select js-selectize type-select" name="city" placeholder="Тип">
-                      <option value=""><!-- всегда пустой --></option>
+                      <option value="">всегда пустой</option>
                       <option value="1">Абаза</option>
                       <option value="2">Абакан</option>
                       <option value="3">Абдулино</option>
@@ -257,7 +257,6 @@
               </form>
 
             </li>
-
             <li class="main-tab tab-block" data-tabs-target="3">
               <h3 class="main-tab__title">
                 Список заказов
@@ -843,8 +842,173 @@
               </div>
 
             </li>
+          </ul> -->
 
-          </ul>
+
+          <div class="single-box">
+            <h3 class="main-tab__title">
+              Список заказов
+            </h3>
+
+            <p class="lists-id">
+              Заказ: &nbsp; <span>ID 1234567</span>
+            </p>
+
+            <ul class="single-list__box">
+              <li class="single-list__row">
+                <div class="single-list__coll">
+                  <span class="single-list__title">
+                    Действия
+                  </span>
+                </div>
+                <div class="single-list__coll">
+                  <button>
+                    <svg width='20' height='18'>
+                      <use href='img/sprite/sprite.svg#download'></use>
+                    </svg>
+                  </button>
+
+                  <button>
+                    <svg width='20' height='14'>
+                      <use href='img/sprite/sprite.svg#eye'></use>
+                    </svg>
+                  </button>
+
+                  <button>
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#copy'></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="single-list__row">
+                <div class="single-list__coll">
+                  <span class="single-list__title">
+                    ID
+                  </span>
+                </div>
+                <div class="single-list__coll">
+                  <span class="single-list__value">
+                    1234567
+                  </span>
+                </div>
+              </li>
+              <li class="single-list__row">
+                <div class="single-list__coll">
+                  <span class="single-list__title">
+                    Тип отправления
+                  </span>
+                </div>
+                <div class="single-list__coll">
+                  <span class="single-list__value">
+                    Внутренний
+                  </span>
+                </div>
+              </li>
+              <li class="single-list__row">
+                <div class="single-list__coll">
+                  <span class="single-list__title">
+                    Отправитель
+                  </span>
+                </div>
+                <div class="single-list__coll">
+                  <span class="single-list__value">
+                    ООО ИП
+                  </span>
+                </div>
+              </li>
+              <li class="single-list__row">
+                <div class="single-list__coll">
+                  <span class="single-list__title">
+                    Город доставки
+                  </span>
+                </div>
+                <div class="single-list__coll">
+                  <span class="single-list__value">
+                    Москва
+                  </span>
+                </div>
+              </li>
+              <li class="single-list__row">
+                <div class="single-list__coll">
+                  <span class="single-list__title">
+                    Получатель
+                  </span>
+                </div>
+                <div class="single-list__coll">
+                  <span class="single-list__value">
+                    ИП ООО
+                  </span>
+                </div>
+              </li>
+              <li class="single-list__row">
+                <div class="single-list__coll">
+                  <span class="single-list__title">
+                    Город получателя
+                  </span>
+                </div>
+                <div class="single-list__coll">
+                  <span class="single-list__value">
+                    Санкт-Петербург
+                  </span>
+                </div>
+              </li>
+
+              <li class="single-list__row">
+                <div class="single-list__coll">
+                  <span class="single-list__title">
+                    Вид доставки
+                  </span>
+                </div>
+                <div class="single-list__coll">
+                  <span class="single-list__value">
+                    До дверей
+                  </span>
+                </div>
+              </li>
+              <li class="single-list__row">
+                <div class="single-list__coll">
+                  <span class="single-list__title">
+                    Дата
+                  </span>
+                </div>
+                <div class="single-list__coll">
+                  <span class="single-list__value">
+                    12.11.21
+                  </span>
+                </div>
+              </li>
+              <li class="single-list__row">
+                <div class="single-list__coll">
+                  <span class="single-list__title">
+                    Статус
+                  </span>
+                </div>
+                <div class="single-list__coll">
+                  <span class="single-list__value">
+                    В доставке
+                  </span>
+                </div>
+              </li>
+              <li class="single-list__row">
+                <div class="single-list__coll">
+                  <span class="single-list__title">
+                    Цена
+                  </span>
+                </div>
+                <div class="single-list__coll">
+                  <span class="single-list__value">
+                    1 р.
+                  </span>
+                </div>
+              </li>
+            </ul>
+
+            <a href="lk.html" class="back-btn">
+              Назад к списку
+            </a>
+
+          </div>
 
 
         </div>
